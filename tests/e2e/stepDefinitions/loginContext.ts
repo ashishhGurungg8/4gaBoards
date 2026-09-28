@@ -5,6 +5,7 @@ import { LoginPage } from '../pageObjects/LoginPage';
 
 
 Given('the admin user has navigated to the login page', async function (this: CustomWorld) {
+  //add comment
   this.loginPage = new LoginPage(this.page);
 
   await this.loginPage.navigateToLoginPage();
@@ -32,7 +33,7 @@ Given('the admin user has logged in with the following credentials:', async func
   if (!this.loginPage) {
     this.loginPage = new LoginPage(this.page);
   }
-  
+
   await this.loginPage.navigateToLoginPage();
   await expect(this.page).toHaveURL(this.loginPage.loginUrl);
   await this.loginPage.loginToDashboard(loginCredentials);
