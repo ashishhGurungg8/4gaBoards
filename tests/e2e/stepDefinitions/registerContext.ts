@@ -1,7 +1,7 @@
 import { Given, When, Then} from "@cucumber/cucumber";
 import { expect } from "@playwright/test";
 import { RegisterPage } from "../pageObjects/RegisterPage";
-import { DashboardPage } from "../pageObjects/dashboardPage";
+import { DashboardPage } from "../pageObjects/DashboardPage";
 
 Given('the user has navigated to the registration page', async function () {
   const registerPage = new RegisterPage(this.page);
